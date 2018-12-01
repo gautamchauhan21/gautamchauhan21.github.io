@@ -12,7 +12,7 @@
 <body onload="new Accordian('basic-accordian',5,'header_highlight');">
   <div id="logo" style:="padding: 50px 50px;height:100px !important;"><h1>Analysis of APMC Data</h1></div>
   <div id="basic-accordian">
-    <div id="test-header" class="accordion_headings header_highlight">Intial Notes</div>
+    <div id="test-header" class="accordion_headings header_highlight">Initial Notes</div>
     <div id="test-content">
       <div class="accordion_child">
         <h1>Data Present</h1>
@@ -41,34 +41,27 @@
         </ul>
       </div>
     </div>
-    <div id="test1-header" class="accordion_headings">Detection of Outliers and their removal</div>
+    <div id="test1-header" class="accordion_headings">Detection and removal of Outliers</div>
     <div id="test1-content">
       <div class="accordion_child">
         <span class="right" style="margin-top:35px;"><img style="max-width:80%;max-height:80%;margin-left:30px;" src="one.png"/><p style="text-align:left;padding-left:70px;">Boxplot of Commodity Wheat showing outliers</p></span><br /><br /><br />
         <span class="right" style="margin-top:15px;"><img style="max-width:80%;max-height:80%;margin-left:30px;" src="two.png"/><p style="text-align:left;padding-left:70px;">Boxplot after removal of outliers</p></span>
-        <p><b>Following Steps were carried out for preprocessing</b></p>
+        <p><b>Preprocessing steps</b></p>
         <ul>
           <li>Checking for null or NAN values</li>
           <li>Converting commodity types to lowercase and removing any leading or trailing whitespaces </li>
           <li>Commodities having first n same characters were checked for any redundancy</li>
-          <li>Modal prices were plotted to see it's characterstic in general</li>
+          <li>Modal prices were plotted to see it's characterstics in general</li>
           <li>Further boxplots were studied to identify outliers</li>
         </ul>
         <br /><br /><br /><br />
-        <p><b>Outlier detection and removal</b></p>
+        <p><b>Final steps to detect and remove outliers</b></p>
         <ul>
           <li>Rows where Minimum Prices was less than Modal Price and Max Price was greater than Modal Price were dropped</li>
           <li>Points lying above and below thresholds defined were eliminated too by dividing the dataset into it's yearly constituents</li>
           <li>Boxplots were plotted again to check that outliers have been removed</li>
           <li>Cleaning of Mandi Data was done in a similar way</li>
         </ul>
-
-        <!-- <h2>Example of a table</h2>
-        <table style="width:100%; border-spacing:0;">
-          <tr><th>Item</th><th>Description</th></tr>
-          <tr><td>Item 1</td><td>Description of Item 1</td></tr>
-          <tr><td>Item 2</td><td>Description of Item 2</td></tr>
-        </table> -->
       </div>
     </div>
     <div id="test2-header" class="accordion_headings">Understanding Seasonality Type</div>
@@ -92,7 +85,7 @@
     <div id="test3-header" class="accordion_headings">Comparing Raw Prices with Deseasonalised Prices</div>
     <div id="test3-content">
       <div class="accordion_child">
-        <p>A function is created which takes a value of APMC and Commodity which is part of non-stationary time series data</p>
+        <p>To serve this purpose, source code takes a value of APMC and Commodity which must be present in non-stationary time series data, and plot of their seasonalised vs minimum support price is displayed</p>
         <p>Following is an example of the output of the function</p>
         <h1>Raw price vs Deseasonalised price for Commodity Maize in APMC Malegaon</h>
         <div><div id="63bd1110-1999-4b91-aa67-40720195f8ef" style="height: 100%; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("63bd1110-1999-4b91-aa67-40720195f8ef", [{"line": {"color": "#17BECF"}, "name": "Deseasonalised Prices", "opacity": 0.8, "x": ["2014-11-01", "2014-12-01", "2014-12-01", "2015-01-01", "2015-02-01", "2015-03-01", "2015-04-01", "2015-05-01", "2015-06-01", "2015-07-01", "2015-08-01", "2015-09-01", "2015-10-01", "2015-11-01", "2015-12-01", "2015-12-01", "2016-01-01", "2016-02-01", "2016-03-01", "2016-06-01", "2016-07-01", "2016-08-01", "2016-09-01"], "y": [988.3182341469037, 1313.8229466266032, 1313.8229466266032, 1144.2636642803834, 1234.509082965275, 1272.1429577993476, 1151.3559203461157, 1158.2059543586474, 1259.9192184637027, 1289.3751731639607, 1352.3266927393202, 1431.076488747529, 1190.0413458430264, 1396.823104260957, 1313.8229466266032, 1313.8229466266032, 1439.0435116493945, 1544.7244871752453, 1495.1480978119823, 1577.7144748625399, 1744.7780155084695, 1751.1818380999698, 1700.9210224600047], "type": "scatter", "uid": "7efaa863-585c-47c3-a598-9abf257450e9"}, {"line": {"color": "#7F7F7F"}, "name": "Minimum Support Price", "opacity": 0.8, "x": [2012, 2013, 2014, 2015, 2016], "y": [1175.0, 1310.0, 1310.0, 1325.0, 1365.0], "type": "scatter", "uid": "9153f58c-f23a-479f-9c86-02f095641888"}], {}, {"showLink": true, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly"})</script><script type="text/javascript">window.addEventListener("resize", function(){Plotly.Plots.resize(document.getElementById("63bd1110-1999-4b91-aa67-40720195f8ef"));});
@@ -116,7 +109,7 @@
             <li>rabi - Contains Commodities which belong to type Rabi</li>
             <li>kharif - Contains Commodities which belong to type Kharif</li>
         </ul>
-        <h2> Following is a graph which contains the 4 Commodity Type and APMC which have shown highest fluctuations in prices for 3 years i.e 2014,2015,2016 consistently</h>
+        <h2> Following is a graph that displays the 4 Commodity Types and APMCs which have shown highest fluctuations in prices for 3 years i.e 2014, 2015, 2016 consistently</h>
           <div><div id="cefdc085-873c-464a-91c0-e99901e788b0" style="height: 100%; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("cefdc085-873c-464a-91c0-e99901e788b0", [{"line": {"color": "#17BECF"}, "name": "pomegranate_pimpalgaon basawant", "opacity": 0.8, "x": ["2014-09-01", "2014-10-01", "2014-11-01", "2014-12-01", "2015-01-01", "2015-02-01", "2015-03-01", "2015-04-01", "2015-05-01", "2015-06-01", "2015-07-01", "2015-08-01", "2015-09-01", "2015-10-01", "2015-11-01", "2015-12-01", "2016-01-01", "2016-02-01", "2016-03-01", "2016-04-01", "2016-05-01", "2016-06-01", "2016-07-01", "2016-08-01", "2016-09-01", "2016-10-01", "2016-11-01"], "y": [7288, 8259, 8310, 6404, 4762, 5540, 6018, 7577, 7061, 5092, 7184, 7679, 9912, 11612, 8738, 6063, 6732, 6240, 6048, 5693, 6112, 6198, 7589, 10048, 12786, 11484, 8062], "type": "scatter", "uid": "fce90925-3917-47e9-a85d-4a37c30bfe60"}, {"line": {"color": "#7F7F7F"}, "name": "pomegranate_indapur", "opacity": 0.8, "x": ["2014-09-01", "2014-10-01", "2014-11-01", "2014-12-01", "2015-01-01", "2015-02-01", "2015-03-01", "2015-04-01", "2015-05-01", "2015-06-01", "2015-07-01", "2015-08-01", "2015-09-01", "2015-10-01", "2015-11-01", "2015-12-01", "2016-01-01", "2016-02-01", "2016-03-01", "2016-04-01", "2016-05-01", "2016-06-01", "2016-07-01", "2016-08-01", "2016-09-01", "2016-10-01", "2016-11-01"], "y": [6200, 8000, 10537, 10422, 8946, 10242, 11292, 10383, 7500, 7800, 6800, 7869, 10646, 11091, 8950, 10093, 9925, 10215, 9200, 7930, 9409, 9554, 9500, 11464, 17675, 13860, 14700], "type": "scatter", "uid": "d65ea489-5cca-45be-95e9-0ba32cbdf163"}, {"line": {"color": "#00FF00"}, "name": "chillies(red)_mumbai", "opacity": 0.8, "x": ["2014-09-01", "2014-10-01", "2014-11-01", "2014-12-01", "2015-01-01", "2015-02-01", "2015-03-01", "2015-04-01", "2015-05-01", "2015-06-01", "2015-07-01", "2015-08-01", "2015-09-01", "2015-10-01", "2015-11-01", "2015-12-01", "2016-01-01", "2016-02-01", "2016-03-01", "2016-04-01", "2016-05-01", "2016-06-01", "2016-07-01", "2016-08-01", "2016-09-01", "2016-10-01", "2016-11-01"], "y": [3930, 5556, 3762, 3489, 2062, 4473, 7524, 8333, 7748, 5628, 6272, 6875, 6045, 5545, 6636, 7000, 7913, 8566, 9000, 7059, 7000, 6714, 6000, 7392, 8000, 5000, 5000], "type": "scatter", "uid": "28caf259-8727-4526-8059-b61b635e54e2"}, {"line": {"color": "#008080"}, "name": "pomegranate_solapur", "opacity": 0.8, "x": ["2014-09-01", "2014-10-01", "2014-11-01", "2014-12-01", "2015-01-01", "2015-02-01", "2015-03-01", "2015-04-01", "2015-05-01", "2015-06-01", "2015-07-01", "2015-08-01", "2015-09-01", "2015-10-01", "2015-11-01", "2015-12-01", "2016-01-01", "2016-02-01", "2016-03-01", "2016-04-01", "2016-05-01", "2016-06-01", "2016-07-01", "2016-08-01", "2016-09-01", "2016-10-01", "2016-11-01"], "y": [7662, 9900, 10373, 10374, 8706, 8837, 11246, 11052, 8615, 7800, 7012, 8044, 12564, 13213, 9930, 7951, 8712, 8437, 7882, 7104, 7920, 8286, 8500, 12456, 14157, 12078, 8705], "type": "scatter", "uid": "f06b8744-7627-486e-a109-4364aaec4798"}], {}, {"showLink": true, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly"})</script><script type="text/javascript">window.addEventListener("resize", function(){Plotly.Plots.resize(document.getElementById("cefdc085-873c-464a-91c0-e99901e788b0"));});
           </script></div>
       </div>
